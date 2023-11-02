@@ -1,5 +1,6 @@
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Rating from './Rating';
 
 type ProductProps = {
   product: ProductType;
@@ -29,6 +30,10 @@ const Product = ({ product }: ProductProps) => (
           <strong>{product.name}</strong>
         </Card.Title>
       </Link>
+      <Card.Text as="div">
+        <Rating rating={product.rating} numReviews={product.numReviews} />
+      </Card.Text>
+      <Card.Text as="h3">{product.price}</Card.Text>
     </Card.Body>
   </Card>
 );
