@@ -27,3 +27,4 @@ yarn-error.log*
 .prettierrc.json
 .eslintignore
 .prettierignore
+dist
